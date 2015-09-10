@@ -1,5 +1,4 @@
-Doud
-####
+# Doud
 
 This little repository is a dead-simple way to create quick prototypes/clickdummys
 using the awesome typo3/fluid template engine. It uses a tiny bootstrap that takes
