@@ -2,10 +2,6 @@
 
 require_once(__DIR__ . '/../vendor/autoload.php');
 
-use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\Tools\Setup;
-use FastRoute\Dispatcher;
-use Mneuhaus\Expose\Core\ExposeVariableProvider;
 use NamelessCoder\Fluid\View\TemplateView;
 use Symfony\Component\Yaml\Yaml;
 
@@ -13,21 +9,6 @@ use Symfony\Component\Yaml\Yaml;
 *
 */
 class Bootstrap {
-
-    /**
-     * @var Dispatcher
-     */
-    protected $dispatcher;
-
-    /**
-     * @var EntityManager
-     */
-    protected $entityManager;
-
-    /**
-     * @var TemplateView
-     */
-    protected $view;
 
     public function __construct() {
 		$httpMethod = isset($_SERVER['REQUEST_METHOD']) ? $_SERVER['REQUEST_METHOD'] : 'GET';
@@ -51,7 +32,7 @@ class Bootstrap {
         $paths->setLayoutRootPaths(array(__DIR__ . '/../Layouts/'));
         $paths->setPartialRootPaths(array(__DIR__ . '/../Partials/'));
         $paths->setTemplatePathAndFilename($templateFile);
-        $this->view = new \NamelessCoder\Fluid\View\TemplateView($paths);
+        $view = new \NamelessCoder\Fluid\View\TemplateView($paths);
 
         $fixturesPaths = array('Global', $path);
         $fixtures = array();
@@ -61,10 +42,10 @@ class Bootstrap {
                 $fixtures = array_replace_recursive($fixtures, Yaml::parse(file_get_contents($fixturePath)));
             }
         }
-        $this->view->assign('baseUrl', $baseUrl);
-        $this->view->assign('currentPath', $path);
-        $this->view->assignMultiple($fixtures);
-        echo $this->view->render();
+        $view->assign('baseUrl', $baseUrl);
+        $view->assign('currentPath', $path);
+        $view->assignMultiple($fixtures);
+        echo $view->render();
     }
 
     public function convertUriToPath($uri) {
