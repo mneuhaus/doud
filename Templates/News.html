@@ -1,0 +1,14 @@
+<f:layout name="Default" />
+
+<f:section name="Content">
+    <div class="row">
+    	<div class="col-xs-12">
+    		<f:for each="{entries}" as="entry">
+    			<div class="news-entry">
+    				<h3>{entry.title}</h3>
+    				<p>{entry.body}</p>
+    			</div>
+    		</f:for>
+    	</div>
+    </div>
+</f:section>

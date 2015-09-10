@@ -1,0 +1,108 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "d001d6a626b419374eb65d8135c384f9",
+    "packages": [
+        {
+            "name": "namelesscoder/fluid",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NamelessCoder/TYPO3.Fluid.git",
+                "reference": "e00313061e0b7dcd2403675a6d1f8a2f5e6b8582"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NamelessCoder/TYPO3.Fluid/zipball/e00313061e0b7dcd2403675a6d1f8a2f5e6b8582",
+                "reference": "e00313061e0b7dcd2403675a6d1f8a2f5e6b8582",
+                "shasum": ""
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "*",
+                "namelesscoder/fluid-lint": "*",
+                "namelesscoder/fluid-schema-generator": "*",
+                "phpunit/phpunit": "*",
+                "satooshi/php-coveralls": "*"
+            },
+            "bin": [
+                "bin/fluid"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NamelessCoder\\Fluid\\": "src/",
+                    "NamelessCoder\\PHPUnitPerformance\\": "vendor/namelesscoder/phpunit-performance/src/"
+                }
+            },
+            "license": [
+                "GPL-3.0+"
+            ],
+            "description": "The TYPO3 Fluid template rendering engine",
+            "support": {
+                "source": "https://github.com/NamelessCoder/TYPO3.Fluid/tree/master",
+                "issues": "https://github.com/NamelessCoder/TYPO3.Fluid/issues"
+            },
+            "time": "2015-07-02 20:07:49"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml.git",
+                "reference": "737b5ca48a451f5e4ed542aae7ed1ab6996bd7eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/737b5ca48a451f5e4ed542aae7ed1ab6996bd7eb",
+                "reference": "737b5ca48a451f5e4ed542aae7ed1ab6996bd7eb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.8|~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2015-08-24 07:21:16"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

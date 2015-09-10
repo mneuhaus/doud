@@ -1,0 +1,14 @@
+{
+    "name": "famelo/doud",
+    "description": "doud is a simple helper to create html prototypes with typo3/fluid",
+	"autoload": {
+		"psr-4": {
+			"Famelo\\Doud\\": "src/"
+		}
+	},
+    "minimum-stability": "dev",
+    "require": {
+        "namelesscoder/fluid": "*",
+        "symfony/yaml": "*"
+    }
+}

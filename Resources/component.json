@@ -1,0 +1,10 @@
+{
+  "name": "Bootstrap Starter",
+  "version": "1.0.0",
+  "main": [],
+  "dependencies": {
+    "jquery": "*",
+    "bootstrap": "3.*",
+    "font-awesome": "*"
+  }
+}
